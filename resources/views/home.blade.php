@@ -6,10 +6,9 @@
 <section class="container">
     <h1>I nostri prodotti</h1>
     <ul>
-    @foreach ( $products as $product)
-        <li>{{$product['titolo']}}</li>
-
-    @endforeach
+        @foreach ($products as $product)
+            <li>{{$product['title']}}</li>
+        @endforeach
     </ul>
 </section>
 
