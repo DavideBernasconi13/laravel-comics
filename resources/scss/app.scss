@@ -11,6 +11,13 @@ $fa-font-path: "../webfonts" !default;
 
 
 /* -------------------------------------------------------------------------------- */
+/* ! general */
+/* -------------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------------- */
 /* ! Header */
 /* -------------------------------------------------------------------------------- */
 .pre-header {
@@ -34,11 +41,57 @@ header {
 }
 
 footer {
-    background-color: #000;
+    background-color: $footer-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        gap: 10px
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .cta {
+        border: 2px solid $main-color;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $negative-color;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .link-social a {
+        line-height: 55px;
+        padding-right: 10px;
+
+    }
+
+    .icon {
+        font-size: 2rem;
+        color: $footer-color;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: $text-color;
+        text-align: center;
+        line-height: 55px;
+    }
 }
 
 #products {
     .card-img-top {
         aspect-ratio: 1 / 1.2;
     }
+}
+
+.debug {
+    border: 1px solid red;
 }
