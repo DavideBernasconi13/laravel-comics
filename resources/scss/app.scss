@@ -22,11 +22,13 @@ $fa-font-path: "../webfonts" !default;
 header {
     .nav-link {
         text-transform: uppercase;
+        color: $text-color;
+        font-weight: 800;
     }
 
     .navbar-nav .nav-link.active {
         font-weight: bold;
-        color: $text-color;
+        color: $main-color;
         border-bottom: 2px solid $main-color;
     }
 }
