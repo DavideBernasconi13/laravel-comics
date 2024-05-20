@@ -1,4 +1,4 @@
-@use  './partials/_variables.scss' as *;
+@use './partials/_variables.scss' as *;
 
 $fa-font-path: "../webfonts" !default;
 
@@ -9,21 +9,32 @@ $fa-font-path: "../webfonts" !default;
 
 @import "~bootstrap/scss/bootstrap.scss";
 
-h1{
-    color: $text-color;
+
+/* -------------------------------------------------------------------------------- */
+/* ! Header */
+/* -------------------------------------------------------------------------------- */
+.pre-header {
+    background-color: $main-color;
+    height: 18px;
+    width: 100%;
 }
-main{
-    background-image: url('../img/backpage.jpg');
-}
+
 header {
+    .nav-link {
+        text-transform: uppercase;
+    }
+
     .navbar-nav .nav-link.active {
         font-weight: bold;
         color: $text-color;
+        border-bottom: 2px solid $main-color;
     }
 }
-footer{
-    background-image: url('../img/footer-montagne-bottom.jpg');
+
+footer {
+    background-color: #000;
 }
+
 #products {
     .card-img-top {
         aspect-ratio: 1 / 1.2;

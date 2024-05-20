@@ -1,23 +1,34 @@
 <header class="bg-white">
-    <div id="logo" class="text-center">
-        <img src="{{ Vite::asset('resources/img/logo.png') }}" alt="Logo">
-    </div>
-    <div id="main-menu">
-        <nav class="navbar-nav container navbar-light">
-            <ul class="list-unstyled d-flex justify-content-center gap-2 text-uppercase">
-                <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
-                        href="{{route('home')}}">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}"
-                        href="{{route('about')}}">
-                        About
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div class="pre-header"></div>
+    <!-- Incollato da bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{{ Vite::asset('resources/img/logo.png') }}" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
+                            href="{{route('home')}}">
+                            Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::currentRouteName() == 'comics' ? 'active' : '' }}"
+                            href="{{route('comics')}}">
+                            Comics
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 </header>
