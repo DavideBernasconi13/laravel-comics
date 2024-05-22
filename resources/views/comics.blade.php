@@ -5,10 +5,9 @@
 @section('content')
 <section class="container">
     <h1>Comics</h1>
-
-    @foreach ($products as $product)
-        <div class="row">
-            <div class="col-3">
+    <div class="row">
+        @foreach ($products as $product)
+            <div class="col-md-3 g-3 ">
                 <div class="card">
                     <img src="{{$product['thumb']}}" class="card-img-top" alt="{{$product['title']}}">
                     <div class="card-body">
@@ -17,9 +16,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
+    </div>
 
-    @endforeach
 </section>
 
 @endsection
